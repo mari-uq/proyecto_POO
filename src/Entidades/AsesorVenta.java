@@ -9,5 +9,18 @@ package Entidades;
  * @author marie
  */
 public class AsesorVenta extends Empleado {
-    
+
+    public AsesorVenta() {
+    }
+
+    public AsesorVenta(String dni, String nombres, String apellidos,
+            String usuario, String password) {
+
+        super(dni, nombres, apellidos, usuario, password, "Asesor");
+    }
+
+    @Override
+    public String getTipoEmpleado() {
+        return "Asesor";
+    }
 }
