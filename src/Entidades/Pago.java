@@ -77,4 +77,4 @@ public class Pago {
                 + "\ndetalle: " + detalle;
 
     }
-}
+}//nice
