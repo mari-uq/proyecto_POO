@@ -10,15 +10,28 @@ package Entidades;
  */
 public class Proyecto {
 
-    private String nombre;
-    private String direccion;
-    private String distrito;
-    private int numeroPisos;
-    private String fechaInicio;
-    private String fechaEntrega;
-    private String estado;
+    // ATRIBUTOS DEL PROYECTO
+
+    private String nombre; // Nombre del proyecto.
+    private String direccion; // Dirección del proyecto.
+    private String distrito; // Distrito donde se ubica.
+    private int numeroPisos; // Cantidad de pisos.
+    private String fechaInicio; // Fecha de inicio de obra.
+    private String fechaEntrega; // Fecha estimada de entrega.
+    private String estado; // Estado del proyecto.
+
+    // ATRIBUTOS PARA DEPARTAMENTOS
+
+    private Departamento[] departamentos; // Arreglo de departamentos del proyecto.
+    private int cantidadDepartamentos; // Cantidad de departamentos registrados.
+
+    // CONSTRUCTORES
 
     public Proyecto() {
+
+        departamentos = new Departamento[300]; // Espacio para 300 departamentos.
+        cantidadDepartamentos = 0; // Inicialmente no hay departamentos.
+
     }
 
     public Proyecto(String nombre, String direccion, String distrito,
@@ -32,7 +45,14 @@ public class Proyecto {
         this.fechaInicio = fechaInicio;
         this.fechaEntrega = fechaEntrega;
         this.estado = estado;
+
+        departamentos = new Departamento[300]; // Inicializa el arreglo.
+        cantidadDepartamentos = 0; // Inicializa el contador.
+
     }
+
+
+    // GETTERS Y SETTERS
 
     public String getNombre() {
         return nombre;
@@ -89,6 +109,23 @@ public class Proyecto {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+
+    // GETTERS PARA DEPARTAMENTOS
+
+    public Departamento[] getDepartamentos() {
+        return departamentos;
+    }
+
+    public int getCantidadDepartamentos() {
+        return cantidadDepartamentos;
+    }
+
+    public void setCantidadDepartamentos(int cantidadDepartamentos) {
+        this.cantidadDepartamentos = cantidadDepartamentos;
+    }
+
+    // ============================
 
     @Override
     public String toString() {
