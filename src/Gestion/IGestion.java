@@ -9,6 +9,7 @@ package Gestion;
  * @author marie
  */
 public interface IGestion {
+    
     void registrar();
     void modificar();
     void eliminar();
